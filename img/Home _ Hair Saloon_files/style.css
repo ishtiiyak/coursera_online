@@ -1,0 +1,153 @@
+/**
+Theme Name: Hair Saloon
+Author: Kolbeco
+Author URI: https://kolbeco.net
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: hair-saloon
+Template: astra
+*/
+
+/*****Sticky Header Transition*****/
+.header-2 {transform: translatey(-180px); -moz-transition: all .3s ease!important; -webkit-transition: all .3s ease!important; transition: all .3s ease!important;}
+.elementor-sticky--effects.header-2  {height: auto!important; transform: translatey(0px);}
+.elementor-sticky--effects.header-1 { display: none!important;}
+
+/*****Header*****/
+/**Social and CTA Buttons**/
+.elementor-element-95b2bf4 .elementor-widget-wrap {padding:0px !important;}
+#mytime-widget-wrapper-1661286687674_button_wrapper .mytime-widget-default-button-v2, #mytime-widget-wrapper-1661288068994_button_wrapper .mytime-widget-default-button-v2 {border:none !important; box-shadow:none !important; padding:10px !important;  margin:0px 5px; font-size:14px !important; line-height:1 !important; background:transparent; transition:.5s all ease-in-out; border-radius:0px !important;}
+#mytime-widget-wrapper-1661286687674_button_wrapper .mytime-widget-default-button-v2:hover, #mytime-widget-wrapper-1661288068994_button_wrapper .mytime-widget-default-button-v2:hover {background:white !important; transition:.25s all ease-in-out; color:#EA0029 !important;}
+
+/**Sticky MyTime Widgets**/
+#mytime-widget-wrapper-1661885255742_button_wrapper .mytime-widget-default-button-v2, #mytime-widget-wrapper-1661885183441_button_wrapper .mytime-widget-default-button-v2 {border:1px #c5c5c5 solid; box-shadow:none !important; padding:10px !important;  margin:0px 5px; font-size:14px !important; line-height:1 !important; background:transparent; transition:.5s all ease-in-out;border-radius:0px !important; }
+#mytime-widget-wrapper-1661885255742_button_wrapper .mytime-widget-default-button-v2:hover, #mytime-widget-wrapper-1661885183441_button_wrapper .mytime-widget-default-button-v2:hover {background:#c5c5c5; transition:.25s all ease-in-out;}
+
+
+/*****Locations*****/
+/**Find a Saloon**/
+#wpsl-search-wrap .wpsl-input {width:40% !important; margin:0px; padding:20px;}
+.wpsl-input label {font-weight:bold;width:auto !important; margin-right:15px !important; position:relative;top:2px;}
+#wpsl-search-wrap .wpsl-select-wrap {width:40% !important; margin:0px; padding:20px;}
+.wpsl-select-wrap label {font-weight:bold;width:auto !important; margin-right:15px !important; position:relative;top:2px;}
+.wpsl-search-btn-wrap {width:20% !important; margin:0px; padding:20px;}
+#wpsl-radius, #wpsl-results {width:48% !important;}
+#wpsl-results {margin-left:15px !important;}
+.wpsl-selected-item {}
+#wpsl-search-btn, #wpsl-search-wrap input {padding:5px; border: 1px solid #d2d2d2; border-radius: 3px;}
+.wpsl-search {margin-bottom: 0px;padding: 0px;background: #f5f5f5;}
+#wpsl-search-btn, #wpsl-search-wrap div {margin:0px;}
+#wpsl-search-input {min-height:35.6px;}
+#wpsl-search-btn {width:100%;font-weight:bold;}
+.wpsl-store-location h3, .wpsl-info-window h3 {margin-bottom:0px; font-size:150%;}
+.wpsl-store-location .wpsl-street, .wpsl-directions {line-height:1.2;}
+.wpsl-store-location .wpsl-street.plaza {font-weight:bold;}
+.wpsl-store-location a, .wpsl-info-window a {color:#BF1E2E;}
+
+/*****Grid Option*****/
+.page-id-8791 .sp_pcp_ctf-wpsl_address2, .page-id-8791 .sp_pcp_ctf-location_description {font-weight:bold;}
+.page-id-8791 .sp_pcp_ctf-wpsl_city {display:inline-block; width:auto !important;}
+.page-id-8791 .sp_pcp_ctf-wpsl_city:after {content:', '; padding-right:5px;}
+.page-id-8791 .sp_pcp_ctf-wpsl_state {display:inline-block; width:auto !important; padding-right:5px;}
+.page-id-8791 .sp_pcp_ctf-wpsl_zip {display:inline-block; width:auto !important;}
+.page-id-8791 .sp_pcp_ctf-wpsl_phone {margin-top:5px;}
+.page-id-8791 .sp_pcp_ctf-google_directions_link_copy {margin-top:5px; font-weight:bold;}
+.page-id-8791 .sp-pcp-post .mytime-widget-default-button {font-size: 14px !important; padding: 0px !important; line-height: 18px !important; margin-top: 10px; border-radius: 0px !important; background: transparent; box-shadow: none !important; color: #EA0029 !important; font-family: "Aleo", Sans-serif !important; font-weight: 400 !important;}
+/**.page-id-8791 .sp-pcp-post .mytime-widget-default-button {font-size:16px !important; padding:10px !important; line-height:1 !important; margin-top:15px; border-radius:0px !important**/
+.page-id-8791 .sp_pcp_ctf-google_directions_link {margin-top:5px;}
+.page-id-8791 .mytime-widget-default-button {background:#EA0029; color:white !important;}
+.page-id-8791 .mytime-widget-default-button:hover {background:white !important; color:#EA0029 !important;}
+
+/**Custom Post Type Saloon Feed**/
+.page-id-8791 .mytime_locations_button .mytime-widget-default-button, .page-id-11944 .mytime_locations_button .mytime-widget-default-button  {font-size: 14px !important; padding: 0px !important; line-height: 18px !important; margin-top: 10px; border-radius: 0px !important; background: transparent; box-shadow: none !important; color: #EA0029 !important; font-family: "Aleo", Sans-serif !important; font-weight: 400 !important;}
+.mytime_locations_button .elementor-shortcode .mytime-widget-button-wrapper:nth-child(2) {display:none !important;}
+
+
+/**Individual Saloon Pages**/
+.saloon_details .elementor-widget {margin-bottom:0px;}
+.location-mytime-widget .mytime-widget-default-button {background:#EA0029; color:white !important; padding:10px 15px; font-size:18px; border-radius:25px !important; transition:all .25s ease-in-out;}
+.location-mytime-widget .mytime-widget-default-button:hover {transition:all .25s ease-in-out; background:white; color:#EA0029 !important;}
+.hours_table, .hours_table td {border:none; padding:0px; font-size:15px;font-family: "Aleo", Sans-serif;}
+.hours_table td:first-child {width:25%;}
+.phone_number {font-family: 'Fjalla One',sans-serif; font-weight:light; text-align:center; font-size:36px; }
+.phone_number a {color:#333 !important;}
+.phone_number a:hover {color:#EA0029 !important;}
+
+/*****Regional Saloon Landing Pages*****/
+#post-11944 .mytime-widget-default-button, #post-12142 .mytime-widget-default-button {background:#EA0029; color:white !important; padding:5px !important; border-radius:0px !important; transition:all .25sec ease-in-out;}
+#post-11944 .mytime-widget-default-button:hover, #post-12142 .mytime-widget-default-button:hover {background:#333333; color:white !important; padding:5px !important; transition:all .25sec ease-in-out;}
+
+/*****Blog Pages*****/
+.single-post .elementor-widget-theme-post-content h1, .single-post .elementor-widget-theme-post-content h2, .single-post .elementor-widget-theme-post-content h3, .single-post .elementor-widget-theme-post-content h4, .single-post .elementor-widget-theme-post-content h5, .single-post .elementor-widget-theme-post-content h6 {margin:25px 0px; clear:none !important;}
+
+
+/*****Privacy Policy Page*****/
+.privacy-policy .site-content h2, .privacy-policy .site-content .elementor-widget-heading {font-size:24px; margin-bottom:0px !important;}
+
+/*****Contact Us Page*****/
+#field_1_8 ul {margin-left:25px;}
+#field_1_8 ul li {list-style-type:disc;}
+
+/*****Product Page - Gravity Form Page*****/
+/*******************Product Page********************/
+.page-id-2854 .cutup-inside {padding-top:0px;}
+.products_form .gfield_description {font-size:20px !important;  color:#bf1e2e; line-height:1 !important; }
+.products_form .gfield {margin-top:5px !important;}
+.products_form .ginput_container_singleproduct {margin-top:0px !important;}
+.products_form .ginput_quantity {margin-top:0px !important;}
+.products_form .gfield_label {text-transform:uppercase; font-weight:bold;}
+.products_form #field_26_10 {margin-top:10px !important; padding-top:15px !important;}
+.products_form #field_26_27 .ginput_container_total {font-size:24px;}
+.products_form #field_27_5 .address_city, #field_27_5 .address_state, #field_27_5 .address_zip {width:31%; padding-right:0px !important;}
+.products_form #field_26_33 {margin-top:10px !important; font-size:130% !important; color:#bf1e2e; border-bottom:2px #bf1e2e solid !important; padding-bottom:0px;}
+#field_27_5 {padding:25px 0px;}
+#input_26_5_1 {width:98.3%;}
+.out_of_stock .ginput_product_price_wrapper {display:none !important;}
+
+/*****New Form*****/
+#gform_wrapper_3  {padding-bottom:100px; !important}
+.prod {width:70%;}
+.prod span {display:block;}
+.prod .prod_desc, .prod .prod_desc_2 {font-size:14px;margin-bottom:5px;color:#333333; padding:10px 0px 10px; line-height:1.5;}
+.prod .prod_desc_2 {font-size:14px;margin-bottom:5px;color:#333333; padding:0px 0px 10px; line-height:1.5;}
+.prod .prod_title {text-align:left; font-size: 18px;}
+.prod .prod_size {font-size:75%; font-weight:bold;}
+.ginput_product_price_wrapper {padding-right:15px;}
+
+.products_form .gsection  {margin-bottom:0px !important; padding-top:10px !important; border-bottom: .5px dashed #d5d5d5 !important;}
+.products_form .gsection_description {line-height:1.5 !important; margin-bottom:0px !important; font-size:14px !important;}
+.gsection_title {font-family: "Roboto Slab", Sans-serif !important; font-size:24px !important;}
+.gfield_price {padding-bottom:60px;}
+.ginput_total  {font-size:30px !important; padding:0px !important;}
+
+/*****Shampoo and Conditioner Products*****/
+#field_27_7 {margin-bottom:0px !important; padding-bottom:0px !important;}
+#field_27_48 {margin-top:-10px !important;}
+
+/*****Total*****/
+#field_27_27, #field_27_50 {font-size:200%; padding-bottom:40px !important; margin-top:-10px !important;}
+
+
+
+/*****Footer*****/
+/**Newsletter Signup**/
+#gform_wrapper_2 .gform_required_legend {display:none !important;}
+#field_2_3, #field_2_4 {padding:10px 0px;}
+#field_2_4 select {padding:12px !important; line-height:17px !important;}
+#gform_2 button {position:relative; top:0px; transition: all .25s ease-in-out; height:auto !important;font-family: "Aleo", Sans-serif;color:white; border:1px solid #EA0029; border-radius:0px; font-weight:400 !important; font-size:17px !important; width:100%; padding:15px 20px !important; margin-top:5px;}
+#gform_2 button:hover {transition: all .25s ease-in-out; background-color:white;color:#EA0029; border: 1px solid #EA0029;}
+
+/*****Misc. Styles*****/
+/**Button Widgets**/
+/**.elementor-widget-button .elementor-button {border-radius:50px 0px 50px 50px !important; padding:15px 25px;transition:all .5s ease-in-out !important; position:relative; top:0px;}
+.elementor-widget-button .elementor-button:hover {position:relative; top:-3px; transition:all .5s ease-in-out !important;}
+#mytime_button .mytime-widget-default-button {position:relative; top:0px; transition: all .3s ease!important;}
+#mytime_button .mytime-widget-default-button:hover {position:relative; top:-3px; transition: all .3s ease!important;}**/
+sup {font-weight:light; font-size:50%;}
+
+/*****Mobile Styles*****/
+@media screen and (max-width: 500px) {
+  .blog_article img {width:100%; display:block; margin-bottom:25px;}
+}

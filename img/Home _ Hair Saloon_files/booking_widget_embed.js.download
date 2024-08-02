@@ -1,0 +1,115 @@
+(function() {
+var e, t, n, o, i, a, r, s, d, l, c, m, p, u, f, g, y, w, _, h, b, x, v, k, C, E, P;
+e = 2147483647, n = null, P = null, c = null, u = null, y = 'meta[name="viewport"]', 
+l = "MyTimeIFrame", d = "iframe_popup_container", t = function(e, t, n) {
+return e.addEventListener(t, function(e) {
+return n(e);
+});
+}, p = function() {
+try {
+return window.self !== window.top;
+} catch (e) {
+return e, !0;
+}
+}, _ = function(e) {
+var t;
+return t = r(e, !1), window.open(t, "WidgetPopupWindow", "width=750,height=750,location=no,menubar=no,toolbar=no,resizable=no,scrollbars=yes,status=1");
+}, w = function(t) {
+var n, o, i, a, r, s;
+return (i = window.document.getElementById(l)) ? i : ((o = document.createElement("div")).id = d, 
+n = t.top_bar_color ? t.top_bar_color : "initial", o.setAttribute("style", "height: 100%; width: 100%; left: 0px; right: 0px; top: 0px; bottom: 0px; position: fixed; color: " + n + "; z-index: " + e + ";"), 
+(a = document.createElement("div")).id = "mytime_modal_wrapper", o.appendChild(a), 
+window.document.body.appendChild(o), (s = document.createElement("span")).id = "mytime-spinner", 
+a.appendChild(s), i = k(window, window.document, a, t, !0), (r = document.createElement("div")).classList.add("hidden"), 
+r.id = "mytime_modal_powered_by", r.innerHTML = "<span>Powered by</span> <img src='https://assets.mytime.com/assets/v4-2x/mytime-logo.png' alt='MyTime logo'/>", 
+a.appendChild(r), E(!0), f(), g(), i);
+}, k = function(e, t, n, o, i) {
+var a, s;
+return c = o, s = r(o, i), (a = t.createElement("iframe")).setAttribute("src", s), 
+a.setAttribute("id", l), a.setAttribute("width", "100%"), a.setAttribute("height", "100%"), 
+a.allowTransparency = "true", n.appendChild(a), a;
+}, r = function(e, t) {
+var n, o, i, a, r, s;
+return "function" == typeof ga && "function" == typeof ga.getAll && ga.getAll()[0] && (a = ga.getAll()[0].get("linkerParam")), 
+n = null, o = null, s = null, e.classes && "false" !== e.classes ? (o = e.classesBookingWidgetDefaultTo, 
+s = null) : (o = e.defaultTo, s = e.widgetIncludes), o && "my_account" === atob(o) && (n = !0), 
+s && "my_account" === atob(s) && (n = !0), i = (r = "https:" === document.location.protocol ? "https:" : "http:") + "//" + e.baseUrl + "/mkp/" + escape(e.company_id), 
+n && (i = r + "//" + e.baseUrl + "/mkp/manage/account/" + escape(e.company_id) + "/my-account"), 
+n || (e.location_id && "none" !== e.location_id && (i = i + "/" + escape(e.location_id)), 
+e.selected_bundle_id && (i += "/packages")), i = i + "?t=" + new Date().getTime(), 
+e.forceWalkInFlow && (i += "&walkin=true"), n || (e.deal_id && (i = i + "&selectedDeals[]=" + escape(e.deal_id)), 
+e.employee_id && (i = i + "&selectedEmployee=" + escape(e.employee_id)), e.variation_id && (i = i + "&cartItems[" + escape(e.variation_id) + "]="), 
+e.selectedClassCategoryId && (i = i + "&selectedClassSessions[]=" + escape(e.selectedClassCategoryId)), 
+e.selectedClassSessionId && (i = i + "&class_session=" + escape(e.selectedClassSessionId)), 
+e.classSessionDate && (i = i + "&class_session_begin_at=" + escape(e.classSessionDate))), 
+e.top_bar_color && (i = i + "&themeColor=" + escape(e.top_bar_color)), e.button_text_color && (i = i + "&themeContrastColor=" + escape(e.button_text_color)), 
+e.header_type && (i = i + "&headerType=" + escape(e.header_type)), e.selected_bundle_id && (i = i + "&selectedBundle=" + escape(e.selected_bundle_id)), 
+e.selected_membership_id && (i = i + "&selectedMembershipId=" + escape(e.selected_membership_id)), 
+t && (i += "&inModal=true"), e.isPreview && (i += "&preview=true"), e.referrer && (i = i + "&referrer=" + escape(e.referrer)), 
+e.classes && (i = i + "&classes=" + escape(e.classes)), e.parent && (i += "&parent=true"), 
+e.accessToken && (i = i + "&access_token=" + e.accessToken), a && (i = i + "&" + a), 
+e.gaParameters && (i = i + "&" + e.gaParameters), e.gclidParameters && (i = i + "&" + e.gclidParameters), 
+e.utmParameters && (i = i + "&" + e.utmParameters), e.rootPageURLParameters && (i = i + "&" + e.rootPageURLParameters), 
+i;
+}, f = function() {
+var e, t;
+if (e = "mytime-widget-style", !document.getElementById(e)) return t = '<style type="text/css" id="' + e + '"> html.mytime-widget-opened, html.mytime-widget-opened body { /* prevent scrolling in the background while the widget is opened */ overflow: hidden !important; } #iframe_modal_container * { box-sizing: border-box; } #mytime_modal_wrapper { display: flex; flex-direction: column; font-family: helvetica; font-size: 12px; width: 100%; height: 100%; overflow: scroll; background: rgba(193, 193, 193, 0.75); padding: 0; padding-top: 10px; padding-bottom: 10px; box-sizing: border-box; } #mytime_modal_powered_by { display: flex; flex-direction: row; align-items: center; justify-content: center; color: #fff; padding: 8px 0px 0px 0px; transition: all 300ms ease; height: 36px; } #mytime_modal_powered_by.hidden { display: none; } #mytime_modal_powered_by img { margin-left: 8px; width: 48px !important; height: 20px !important; } @media only screen and (max-width: 1020px) { #mytime_modal_wrapper { padding-top: 0px; padding-bottom: 0px; } #mytime_modal_powered_by { height: 0px; padding: 0px; } } #mytime-spinner { font-size: 40px; display: inline-block; box-sizing: border-box; width: 1em; height: 1em; border-radius: 100%; border-width: 0.15em; border-style: solid; border-color: rgba(0, 0, 0, 0.1); border-top-color: currentColor; animation: mytimeSpinnerSpin 1s infinite linear; position: absolute; top: 50%; left: 50%; margin-top: 30px; transform: translate(-50%, -50%); z-index: 0; } @keyframes mytimeSpinnerSpin { 0% { transform: translate(-50%, -50%) rotate(0deg); } 100% { transform: translate(-50%, -50%) rotate(360deg); } } #' + l + " { border: none; max-width: 1000px; flex: 1 1 100%; display: flex; flex-direction: column; align-self: center; min-height: 400px; z-index: 1; position: relative; opacity: 0; transition: opacity 300ms ease; } #" + l + ".loaded { opacity: 1!important; } @media screen and (max-width: 1020px) { #mytime-spinner { margin-top: 0; } } </style>", 
+window.document.head.insertAdjacentHTML("beforeend", t);
+}, E = function(e) {
+var t, n;
+return null == e && (e = !0), n = window.document.documentElement, t = e ? (n.className + " mytime-widget-opened").trim() : (n.className || "").replace(/\b\s?mytime-widget-opened\b/, ""), 
+n.className = t;
+}, g = function() {
+var e, t;
+return t = "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", 
+(e = document.querySelector(y)) ? u = e.content : (u = null, (e = document.createElement("meta")).setAttribute("name", "viewport"), 
+document.head.appendChild(e)), e.setAttribute("content", t);
+}, x = function() {
+var e;
+if (e = document.querySelector(y)) return u ? e.setAttribute("content", u) : e.remove();
+}, s = function(e) {
+if (e && e.data) switch (e.data) {
+case "close":
+return o();
+
+case "showMytimeFooter":
+return C();
+
+case "loaded":
+return m();
+
+default:
+return null;
+}
+}, v = function(e) {
+if (n) return ("iframe" === P ? n.contentWindow : n).postMessage(e, "*");
+}, o = function() {
+if (n) return "window" === P ? a() : i();
+}, a = function() {
+return n.close();
+}, i = function() {
+return n.parentElement.parentElement.remove(), E(!1), x();
+}, h = function(e) {
+return e ? e.loginOnShopify ? fetch("/apps/mt-booking-widget/mytime_user_tokens/retrieve").then(function(t) {
+return 200 !== t.status ? b(e) : t.json();
+}).then(function(t) {
+return t.user_token ? (e.accessToken = t.user_token.access_token, b(e)) : b(e);
+})["catch"](function() {
+return b(e);
+}) : b(e) : (console.warn("no valid widget data provided"), null);
+}, b = function(e) {
+return p() ? (n = _(e), P = "window") : (n = w(e), P = "iframe"), t(window, "message", s);
+}, C = function() {
+var e;
+if (e = document.querySelector("#mytime_modal_powered_by")) return e.classList.remove("hidden");
+}, m = function() {
+var e;
+return (e = document.getElementById(l)) && e.classList.add("loaded"), v({
+type: "widgetConfig",
+config: c
+});
+}, window.myTimeWidget = {
+open: h,
+close: o
+};
+}).call(this);
